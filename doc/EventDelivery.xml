@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0">
+  <title>Demo Event Delivery Specification</title>
+  <chapter xml:id="subscriptions">
+    <title>Subscriptions</title>
+    <para>A client may create one event subscription per device.</para>
+    <para>Subscriptions expire after 60 minutes.</para>
+  </chapter>
+  <chapter xml:id="delivery">
+    <title>Delivery</title>
+    <para>The device shall deliver events using HTTPS.</para>
+    <para>Each notification shall contain a timestamp and an event identifier.</para>
+    <para>Notifications shall be delivered in timestamp order.</para>
+  </chapter>
+</book>

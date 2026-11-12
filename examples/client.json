@@ -1,0 +1,5 @@
+{
+  "endpoint": "https://camera.example.invalid/control",
+  "timeoutSeconds": 30,
+  "retryCount": 1
+}
