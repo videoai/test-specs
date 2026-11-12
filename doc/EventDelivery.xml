@@ -3,13 +3,14 @@
   <title>Demo Event Delivery Specification</title>
   <chapter xml:id="subscriptions">
     <title>Subscriptions</title>
-    <para>A client may create one event subscription per device.</para>
-    <para>Subscriptions expire after 60 minutes.</para>
+    <para>A client may create up to four event subscriptions per device.</para>
+    <para>Subscriptions expire after 30 minutes.</para>
   </chapter>
   <chapter xml:id="delivery">
     <title>Delivery</title>
     <para>The device shall deliver events using HTTPS.</para>
-    <para>Each notification shall contain a timestamp and an event identifier.</para>
-    <para>Notifications shall be delivered in timestamp order.</para>
+    <para>Each notification shall contain a timestamp, an event identifier, and a sequence number.</para>
+    <para>Notifications shall be delivered in sequence-number order.</para>
+    <para>Clients shall acknowledge notifications within 10 seconds.</para>
   </chapter>
 </book>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0">
+  <title>Demo Discovery Specification</title>
+  <chapter xml:id="discovery">
+    <title>Device discovery</title>
+    <para>Clients may discover devices through a local directory service.</para>
+    <para>Discovery responses shall include a device identifier and a service URL.</para>
+  </chapter>
+</book>
