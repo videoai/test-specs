@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0">
+  <title>Demo Delivery Policy Specification</title>
+  <chapter xml:id="policy">
+    <title>Delivery policy</title>
+    <para>This fictional policy is provided for testing reviews of a newly added document.</para>
+    <para>The device shall use exponential backoff between retry attempts.</para>
+    <para>The maximum retry interval shall be 60 seconds.</para>
+  </chapter>
+  <chapter xml:id="security">
+    <title>Security</title>
+    <para>Event subscriptions shall be associated with the authenticated client identity.</para>
+  </chapter>
+</book>

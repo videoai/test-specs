@@ -1,0 +1,6 @@
+{
+  "callback": "https://client.example.invalid/events",
+  "acknowledgementSeconds": 2,
+  "retryCount": 10,
+  "historyMinutes": 30
+}
