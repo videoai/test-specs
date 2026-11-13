@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <book xmlns="http://docbook.org/ns/docbook" version="5.0">
   <title>Demo Camera Control Specification</title>
-  <info><releaseinfo>0.1 — review playground</releaseinfo></info>
+  <info><releaseinfo>0.2 — camera review demo</releaseinfo></info>
   <chapter xml:id="scope">
     <title>Scope</title>
     <para>This fictional specification describes a small camera-control service for review testing.</para>
@@ -12,19 +12,23 @@
     <section xml:id="movement">
       <title>Move camera</title>
       <para>A client shall provide a target position before requesting movement.</para>
-      <para>The device shall stop movement after 30 seconds without a keep-alive message.</para>
-      <para>Movement requests shall be authenticated.</para>
+      <para>The device shall stop movement after 300 seconds without a keep-alive message.</para>
+      <para>Movement requests should be authenticated.</para>
     </section>
     <section xml:id="presets">
       <title>Presets</title>
-      <para>The device shall support at least 8 named presets.</para>
-      <para>Preset names may contain up to 32 characters.</para>
-      <para>Legacy clients may send an unauthenticated reset command.</para>
+      <para>The device shall support at least 32 named presets.</para>
+      <para>Preset names may contain up to 64 characters.</para>
     </section>
+  </chapter>
+  <chapter xml:id="request-tracking">
+    <title>Request tracking</title>
+    <para>Every movement request shall include a unique request identifier.</para>
+    <para>The device shall retain the last 100 request identifiers for at least 24 hours.</para>
   </chapter>
   <chapter xml:id="errors">
     <title>Error handling</title>
     <para>Invalid target coordinates shall result in an InvalidPosition fault.</para>
-    <para>Clients should retry a failed movement request immediately.</para>
+    <para>Clients should retry a failed movement request after 5 seconds.</para>
   </chapter>
 </book>
